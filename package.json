@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src/ --ext .js",
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test NODE_PATH=./src mocha ./test/**/*.spec.js --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch",
