@@ -1,22 +1,31 @@
 # Mois Du JS
 
-React / Redux, la stack tendance, efficace et performante
-
-> Vous voulez définir de manière déclarative une interface utilisateur ? React est la librairie qui vous permet de construire et maintenir facilement des composants Stateful et Stasless. Combiné à Redux pour gérer l’état de votre application selon l’architecture Flux, cette stack a séduit et est aujourd’hui très largement utilisée. Venez la décortiquer avec nous et vérifier comment elle rivalise avec un framework, par sa souplesse et sa robustesse.
+> Pour avoir un code source au style uniforme qui respecte les bons patterns et vérifier de manière automatiser que toutes les équipes les appliquent.
 
 ## Installation
 
-* `git clone https://github.com/xebia-france/moisdujs-react.git`
-* `cd moisdujs-react`
+* `git clone https://github.com/xebia-france/moisdujs-eslint.git`
+* `cd moisdujs-eslint`
 * `npm install`
 
 ## Exécution
 
-* `npm start`
-* Aller à l'url [http://localhost:3000](http://localhost:3000).
+* `npm lint`
 
-### Exécution des tests
+### step/1bis
 
-* `npm test`
-ou en mode TDD
-* `npm run test:watch`
+Eslint init avec l’option "Inspect your Javascript files".
+
+### step/1
+
+Eslint init avec l’option "Use popular styleguide" > AirBnB.
+
+### step/2
+
+Ajout d’un paquet npm pour configurer un hook de pré-commit.  
+Configuration des scripts npm à passer en pré-commit dans package.json.  
+*Note :* Cette étape a été commit avec l’option `--no-verify` car nous avons laissé exprêt les erreurs de linting du code.
+
+### step/2bis
+
+Exemple de surcharge d’une règle héritée du set AirBnB.
